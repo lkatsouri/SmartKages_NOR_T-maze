@@ -27,38 +27,7 @@ Two notebooks analyse novel object recognition (NOR) data from the Smart-Kage. R
      exactly.
    - Run sections 1–6.
    - Results are saved to `<BASE_DIR>/NOR_MASTER_<MASTER_NAME>/`.
+  
 
-### What each notebook does
-
-### `SmartKage_NOR_postprocessing.ipynb`
-
-This notebook turns one cohort's raw data into tables:
-
-- It finds the wheel change that starts each phase (sample, ITI baseline, test and, optionally, OiP).
-- It excludes kages that failed QC (`NOR_good`).
-- It bins object exploration into 1-min bins over each phase.
-- It calculates:
-  - total and cumulative exploration;
-  - the test-phase discrimination index (DI): over time, and one value per mouse for the first 20 min
-    and the first 2 h;
-  - which object each mouse approached first in the test phase.
-
-### `SmartKage_NOR_analysis.ipynb`
-
-This notebook combines the processed cohorts into master tables and analyses them:
-
-- **Exploration:** totals per phase, exploration over time, exploration around each wheel change, and
-  cumulative exploration.
-- **Discrimination index:**
-  - DI over the test phase;
-  - DI at fixed time points;
-  - test DI compared with the sample-phase DI (baseline side preference).
-- **First approach:** the proportion of mice that went to the novel object first.
-- **Statistics:**
-  - total exploration compared between genotypes;
-  - sample vs test DI within each genotype, with a paired t-test.
-
-DI = (novel − familiar) / (novel + familiar). It runs from −1 (only the familiar object) to +1 (only the
-novel object); 0 means no preference.
-
-Each notebook's first cell has more detail.
+## 2. Smart-Kage T-maze analysis
+descriptions to be added
